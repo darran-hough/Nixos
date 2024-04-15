@@ -2,3 +2,13 @@ winetricks corefonts
 
 
 cp -r ~/.wine ~/.wine-base
+
+# Create common VST paths
+mkdir -p "$HOME/.wine/drive_c/Program Files/Steinberg/VstPlugins"
+mkdir -p "$HOME/.wine/drive_c/Program Files/Common Files/VST2"
+mkdir -p "$HOME/.wine/drive_c/Program Files/Common Files/VST3"
+
+# Add them into yabridge
+yabridgectl add "$HOME/.wine/drive_c/Program Files/Steinberg/VstPlugins"
+yabridgectl add "$HOME/.wine/drive_c/Program Files/Common Files/VST2"
+yabridgectl add "$HOME/.wine/drive_c/Program Files/Common Files/VST3"
