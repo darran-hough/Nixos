@@ -1,0 +1,4 @@
+winetricks corefonts
+
+
+cp -r ~/.wine ~/.wine-base
